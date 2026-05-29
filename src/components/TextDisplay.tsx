@@ -28,14 +28,14 @@ export default function TextDisplay() {
   return (
     <div
       style={{
-        textAlign: "left",
+        display: "flex",
+        flexWrap: "wrap",
         fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace",
         fontSize: 22,
         lineHeight: 2.0,
         letterSpacing: 0.5,
         padding: "24px 32px",
-        maxWidth: "100%",
-        overflow: "hidden",
+        width: "100%",
       }}
     >
       {words.map((word, wi) => {
