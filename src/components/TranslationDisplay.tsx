@@ -7,12 +7,14 @@ export default function TranslationDisplay() {
     <div
       style={{
         textAlign: "center",
-        fontSize: 18,
-        color: "#6bd4ff",
-        minHeight: 32,
-        lineHeight: "32px",
-        opacity: translation ? 0.85 : 0,
-        transition: "opacity 0.15s",
+        fontSize: 28,
+        fontWeight: 600,
+        color: "#ffd93d",
+        minHeight: 44,
+        lineHeight: "44px",
+        opacity: translation ? 1 : 0,
+        transition: "opacity 0.1s",
+        letterSpacing: 2,
       }}
     >
       {translation || " "}
