@@ -13,15 +13,14 @@
     "windows": [
       {
         "title": "KeyWeaver",
-        "width": 900,
-        "height": 600,
-        "minWidth": 700,
-        "minHeight": 500,
+        "width": 960,
+        "height": 640,
+        "minWidth": 760,
+        "minHeight": 540,
         "resizable": true,
-        "transparent": true,
-        "decorations": false,
-        "alwaysOnTop": true,
-        "shadow": false
+        "transparent": false,
+        "decorations": true,
+        "center": true
       }
     ],
     "security": {

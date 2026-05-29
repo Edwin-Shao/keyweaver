@@ -12,13 +12,17 @@ export default function TextDisplay() {
   return (
     <div
       style={{
-        textAlign: "center",
+        textAlign: "left",
         fontFamily: "'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace",
-        fontSize: 26,
-        lineHeight: 1.8,
-        letterSpacing: 1,
-        wordSpacing: 6,
-        padding: "16px 0",
+        fontSize: 22,
+        lineHeight: 2.0,
+        letterSpacing: 0.5,
+        padding: "24px 32px",
+        wordBreak: "break-word",
+        overflowWrap: "break-word",
+        whiteSpace: "normal",
+        maxWidth: "100%",
+        overflow: "hidden",
       }}
     >
       {chars.map((ch, i) => {
@@ -47,8 +51,8 @@ export default function TextDisplay() {
               color,
               background: bg,
               borderBottom,
-              borderRadius: bg !== "transparent" ? 3 : 0,
-              padding: bg !== "transparent" ? "0 2px" : 0,
+              borderRadius: 3,
+              display: "inline",
             }}
           >
             {ch === " " ? " " : ch}

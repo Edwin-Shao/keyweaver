@@ -23,8 +23,15 @@ export function useKeyboardListener() {
     async (e: KeyboardEvent) => {
       // Ignore modifier-only keys and IME composition
       if (e.isComposing) return;
-      if (["Shift", "Control", "Alt", "Meta", "CapsLock", "Tab"].includes(e.key))
+      if (["Shift", "Control", "Alt", "Meta", "CapsLock"].includes(e.key))
         return;
+
+      // Cmd+Q/W to quit, Cmd+H to hide
+      if (e.metaKey && (e.key === "q" || e.key === "w")) {
+        const { getCurrentWindow } = await import("@tauri-apps/api/window");
+        await getCurrentWindow().close();
+        return;
+      }
 
       e.preventDefault();
 
